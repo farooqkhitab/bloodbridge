@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family: 'Saira Condensed'; */
+    font-family: 'Montserrat';
+}
+
+
+
+body{
+    /* height: 1200px; */
+    /* background:linear-gradient(to bottom, #fff, #ECBCBF); */
+    background: #f8f2f2;
+    font-family: "Saira Condensed", sans-serif;
+    /* margin: 8px; */
+}
+
+.request-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Saira', sans-serif;
+
+}
+
+.request-wrapper div{
+    margin-bottom: 10px;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------------------- */
+
+.find_donor_container{
+    /* border: 2px solid red; */
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.find_donor_form{
+
+    margin-top: 8px;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+.input_group {
+    flex: 1; /* Allow each input group to grow equally */
+    display: flex;
+    flex-direction: column; /* Stack label and select vertically */
+
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #868686;
+    border-radius: 5px;
+    background-color: white;
+    color: #4d4c4c;
+    appearance: none; /* Removes default arrow */
+    cursor: pointer;
+}
+
+/* When select is focused */
+select:focus {
+    outline: none;
+    border-color: #34c127;
+    background-color: #f9f9f9;
+}
+
+
+
+.search_donor_container{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 8px;
+
+    
+}
+
+#search-donors{
+    width: 200px;
+}
+
+#search{
+    margin-right: 8px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Rank section styles */
+
+.outer_container{
+    /* border: 2px solid rgb(0, 0, 0) ; */
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+    /* background-color: #612e2e; */
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+.container{
+    /* border: 2px solid rgb(0, 0, 0) ; */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0.625rem 0.625rem 0 0.625rem;
+    border-radius: 0.625rem;
+    background-color: rgba(193, 39, 51, 0.25);
+}
+
+h2
+{
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 0.625rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.box
+{
+    position: relative;
+    min-width: 100%;
+}
+
+.box .list
+{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0.625rem;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    background: #fff;
+}
+
+.box:hover .list
+{
+    filter: blur( 1px);
+    opacity: .75;
+  
+}
+
+.box .list:hover
+{
+    box-shadow: -18px 20px 35px rgba(2, 2, 2, 1);
+    transform: scale(1.15);
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.box .list .imgbx
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px red; */
+
+}
+
+.box .list .imgbx img
+{
+  
+
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;          
+    object-position: center;
+}
+
+.box .list .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box .list .content .rank{
+    /* border: solid 2px blue; */
+    position: absolute;
+    right: 10px;
+    color: #c12733;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.box .list .content .rank small{
+    font-weight: bold;
+    opacity: 0.25;
+}
+
+/* .box .list:hover .content .rank{
+    right: 10px;
+} */
+
+
+.box .list .content h4{
+    color: #617da4;
+}
+
+
+.box .list .content p{
+   
+    font-size: .9rem;
+    color: #c12733;
+
+}
+
+.box .list .content p i{
+    font-size: 1rem;
+    color: #c12733;
+    margin-right: 0.05rem;
+}
+
+
+.select-btns{
+    display: flex;
+    justify-content: space-between;
+}

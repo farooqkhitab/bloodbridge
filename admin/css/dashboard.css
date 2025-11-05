@@ -1,0 +1,493 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fb;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h2 {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.logo i {
+    color: #e74c3c;
+    margin-right: 10px;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.menu li {
+    padding: 12px 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu li.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.menu li.logout {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.menu li.logout a {
+    color: #e74c3c;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    width: 300px;
+    outline: none;
+}
+
+.search-bar button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notifications {
+    position: relative;
+    cursor: pointer;
+}
+
+.notifications i {
+    font-size: 18px;
+    color: #555;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    padding: 20px 0;
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.stat-icon i {
+    font-size: 24px;
+}
+
+.stat-details h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.stat-growth {
+    font-size: 12px;
+    color: #27ae60;
+}
+
+/* Charts Section */
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-container h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+/* Blood Groups Section */
+.blood-groups-section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.blood-groups-section h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.blood-groups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.blood-group-card {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.blood-group-card:hover {
+    transform: scale(1.05);
+}
+
+.blood-group-card h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.blood-group-card .count {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.stock-level {
+    height: 5px;
+    border-radius: 5px;
+}
+
+.stock-level.full {
+    background: #27ae60;
+}
+
+.stock-level.medium {
+    background: #f39c12;
+}
+
+.stock-level.low {
+    background: #e74c3c;
+}
+
+/* Recent Activity Section */
+.recent-activity {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recent-activity h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+
+.activity-item:hover {
+    background: #f0f0f0;
+}
+
+.activity-icon {
+    min-width: 40px;
+    height: 40px;
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.activity-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.activity-details p {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.activity-details .time {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+/* Download Button Styles */
+.download-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.download-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.download-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+}
+
+.download-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .menu {
+        display: flex;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+    
+    .menu li {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+    
+    .menu li.logout {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 10px;
+    }
+    
+    .stats-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .blood-groups-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .search-bar input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .user-info {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .search-bar {
+        width: 100%;
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+}

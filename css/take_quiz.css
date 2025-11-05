@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Saira Condensed'; */
+    font-family: 'Montserrat';
+}
+
+.eligibility-container {
+    /* border: 2px solid red; */
+    /* width: 90%; */
+    max-width: 1120px;
+    background-color: #fff;
+    max-width: 1120px;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eligibility-container img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.eligibility-container h1 {
+    font-size: 2em;
+    color: #600030;
+    margin: 10px 0;
+}
+
+.eligibility-container p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.eligibility-btn {
+    font-size: 1rem;
+    color: white;
+    background-color: #600030;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.eligibility-btn:hover {
+    background-color: #900046;
+}

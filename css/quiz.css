@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f2f2;
+  margin: 8px;
+  
+}
+
+main {
+  
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blink effect on buttons */
+
+/* Active (on click) feedback */
+button:active {
+  animation: blink 0.5s ease;
+  /* Trigger blink animation */
+}
+
+/* Blink animation */
+@keyframes blink {
+
+  0%,
+  100% {
+    background-color: #600030;
+    color: #fff;
+    /* Initial color */
+  }
+
+  50% {
+    background-color: #fff;
+    color: #600030;
+    /* Blink color */
+  }
+}
+
+.quiz-container {
+  /* width: 100%; */
+  max-width: 1120px  !important;  /* Maximum width */
+  width: 100%  !important  ;        /* Takes full width on smaller screens */
+  margin: 0 auto;     /* Centers the parent */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  display: flex;
+  overflow: hidden;
+  height: 450px;
+}
+
+.quiz-header {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #ffe6f0; */
+}
+
+.quiz-header img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.quiz-step {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.quiz-question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+  font-size: 1.5em;
+  color: #600030;
+}
+
+.quiz-content {
+  border-right: 2px solid #ddd;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.quiz-question-area {
+  /* width: 60%; */
+  text-align: center;
+}
+
+.quiz-answer-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.quiz-answer-btn {
+  border: 2px solid #600030;
+  background-color: white;
+  color: #600030;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-answer-btn.selected {
+  background-color: #600030;
+  color: white;
+}
+
+.quiz-answer-btn:hover {
+  background-color: #600030;
+  color: white;
+}
+
+.quiz-info-area {
+  align-self: center;
+  width: 40%;
+  padding: 10px 10px 10px 0;
+  /* background-color: #f8f8f8; */
+  /* border-left: 1px solid #ddd; */
+}
+
+.quiz-info-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Montserrat;
+}
+
+.quiz-info-content {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.quiz-nav-btn {
+  border: 2px solid #600030;
+  background-color: white;
+  color: #600030;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-nav-btn.hidden {
+  visibility: hidden;
+}
+
+.quiz-nav-btn:hover {
+  background-color: #600030;
+  color: white;
+}
+
+.quiz-error,
+.quiz-success {
+  display: none;
+  padding: 40px;
+  text-align: center;
+}
+
+.quiz-error img,
+.quiz-success img {
+  width: 120px;
+}
+
+.quiz-error-title,
+.quiz-success-title {
+  font-size: 2em;
+  color: #600030;
+  margin-top: 20px;
+}
+
+.quiz-error-message,
+.quiz-success-message {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.full-screen-message {
+  width: 100%;
+  padding: 16px;
+  /* max-width: 1120px ; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; */
+}
+
+.full-screen-message h2{
+  font-family: Montserrat;
+  font-size: 24px ;
+
+  color: #600030;
+  font-weight: bold;
+}
+
+.full-screen-message p{
+  font-family: "Saira Condensed";
+  font-size: 16px;
+}
+
+/* .full-screen-message{
+  align-self: center;
+} */

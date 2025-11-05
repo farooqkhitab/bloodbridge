@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: #f8f2f2;
+}
+
+#navbar {
+    /* border: 2px solid black; */
+    /* width: 90%; */
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 100px;
+}
+
+.tabs {
+    /* border: 2px solid rgb(193, 28, 28); */
+
+}
+
+
+/* Style for the tabs */
+.tabs a {
+    text-decoration: none;
+    color: black;
+    /* Adjust color as per your design */
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: 32px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Underline for active tab */
+.tabs a.active {
+    text-decoration: none;
+    font-weight: bold;
+
+    color: #333;
+    /* Red color to match the underline in the image */
+}
+
+.tabs a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    /* Adjust based on your padding */
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 5px;
+    background-color: #A22424;
+    /* Red underline */
+}
+
+.profile-pic {
+    width: 66px;
+    height: 66px;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #A22424;
+    border-radius: 50%;
+    /* padding: 1px; */
+    transition: transform 0.3s; /* Retain the hover effect from previous styling */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Retain the hover effect */
+}
+
+.sign_login_btn {
+    /* border: 2px solid rgb(162, 253, 7); */
+
+}
+
+.btn_style_1 {
+    width: 100px;
+    height: 48px;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    border-radius: 3rem;
+    border: 2px solid #C12733;
+    color: #C12733;
+    font-size: 20px;
+    background-color: white;
+
+}
+
+
+.btn_style_2 {
+    width: 100px;
+    height: 48px;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    border-radius: 3rem;
+    border: 3px solid #C12733;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: #C12733;
+    
+
+}
+
